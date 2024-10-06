@@ -1,0 +1,103 @@
+
+/* --- Globales --- */
+  :root {
+    --font-family: 'Inter', sans-serif;
+    --font-size-base: 14px;
+    --green: hsl(75, 94%, 57%);
+    --white: #ffffff;
+    --white2: #d0d0d0;
+    --grey700: hsl(0, 0%, 20%);
+    --grey800: hsl(0, 0%, 12%);
+    --grey900: hsl(0, 0%, 8%);
+    --background-color: #141414;
+  }
+  
+  /* --- Estilos base --- */
+  body {
+    font-family: var(--font-family);
+    background-color: var(--background-color);
+    color: var(--secondary-color);
+    font-size: var(--font-size-base);
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+  }
+  .container{
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    height: 100vh; /* Full height of the viewport */
+  }
+
+  /* --- Estilos de card --- */
+  .card {
+    background-color: #1f1f1f;
+    padding: 2rem 3rem;
+    border-radius: 1rem;
+    max-width: 30rem;
+    margin: 0 auto;
+    text-align: center;
+    max-height: 40rem;
+  }
+  
+  .card__header {
+    margin: 1rem;
+  }
+  
+  .card__image img {
+    border-radius: 50%;
+    width: 5rem;
+    height: 5rem;
+  }
+  
+  .card__info {
+    margin-top: 1rem;
+    .card__name {
+      font-size: x-large;
+      color: var(--white);
+      margin: 0.5rem;
+    }
+    
+    .card__location {
+      color: var(--green);
+      margin: 0.5rem auto;
+      font-size: small;
+    }
+    
+    .card__bio {
+      color: var(--white2);
+      margin: 1.5rem auto;
+      font-size: small;
+    }
+  }
+  
+  /* --- Estilos de links --- */
+  .card__links {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    li{
+      display: flex;
+      a{
+        width: 100%;
+      }
+    }
+  }
+  
+  .card__links a {
+    text-decoration: none;
+    color: var(--white);
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #555;
+    transition: background-color 0.3s;
+  }
+  
+  .card__links a:hover {
+    background-color: var(--green);
+    color: var(--background-color);
+  }
+  
+  
