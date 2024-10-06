@@ -4,8 +4,11 @@
     --font-family: 'Inter', sans-serif;
     --font-size-base: 14px;
     --green: hsl(75, 94%, 57%);
-    --white: #ffffff;
+    --white: hsl(0, 0%, 100%);
     --white2: #d0d0d0;
+    --fwregular: 400;
+    --fwsemibold: 600;
+    --fwbold: 700;
     --grey700: hsl(0, 0%, 20%);
     --grey800: hsl(0, 0%, 12%);
     --grey900: hsl(0, 0%, 8%);
@@ -13,6 +16,14 @@
   }
   
   /* --- Estilos base --- */
+
+  .container{
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    height: 100vh; /* Full height of the viewport */
+  }
+
   body {
     font-family: var(--font-family);
     background-color: var(--background-color);
@@ -24,20 +35,13 @@
     list-style: none;
     padding: 0;
   }
-  .container{
-    display: flex;
-    justify-content: center; /* Center horizontally */
-    align-items: center; /* Center vertically */
-    height: 100vh; /* Full height of the viewport */
-  }
-
+  
   /* --- Estilos de card --- */
   .card {
     background-color: #1f1f1f;
     padding: 2rem 3rem;
     border-radius: 1rem;
     max-width: 30rem;
-    margin: 0 auto;
     text-align: center;
     max-height: 40rem;
   }
@@ -55,6 +59,7 @@
   .card__info {
     margin-top: 1rem;
     .card__name {
+      font-weight: var(--fwbold);
       font-size: x-large;
       color: var(--white);
       margin: 0.5rem;
@@ -64,12 +69,14 @@
       color: var(--green);
       margin: 0.5rem auto;
       font-size: small;
+      font-weight: var(--fwregular);
     }
     
     .card__bio {
       color: var(--white2);
       margin: 1.5rem auto;
       font-size: small;
+      font-weight: var(--fwregular);
     }
   }
   
@@ -82,6 +89,7 @@
       display: flex;
       a{
         width: 100%;
+        font-weight: var(--fwregular);
       }
     }
   }
@@ -91,8 +99,9 @@
     color: var(--white);
     padding: 10px;
     border-radius: 5px;
-    background-color: #555;
+    background-color: var(--grey700);
     transition: background-color 0.3s;
+    font-weight: var(--fwregular);
   }
   
   .card__links a:hover {
